@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseListItem correctly 1`] = `
+<tr>
+  <td>
+    Gum
+  </td>
+  <td>
+    $195.00
+  </td>
+  <td>
+    December 31st, 1969
+  </td>
+  <td>
+    <Link
+      replace={false}
+      to="/edit/1"
+    >
+      Edit
+    </Link>
+  </td>
+  <td>
+    <button
+      onClick={[Function]}
+    >
+      Remove
+    </button>
+  </td>
+</tr>
+`;
