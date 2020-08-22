@@ -1,0 +1,273 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          Expensify
+</h1>,
+        <NavLink
+          activeClassName="is-active"
+          ariaCurrent="true"
+          exact={true}
+          to="/"
+>
+          Go To Dashboard Page
+</NavLink>,
+        <br />,
+        <NavLink
+          activeClassName="is-active"
+          ariaCurrent="true"
+          to="/create"
+>
+          Go To Add Page
+</NavLink>,
+        <br />,
+        <NavLink
+          activeClassName="is-active"
+          ariaCurrent="true"
+          to="/edit"
+>
+          Go Edit Page
+</NavLink>,
+        " ",
+        <br />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Expensify",
+        },
+        "ref": null,
+        "rendered": "Expensify",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "is-active",
+          "ariaCurrent": "true",
+          "children": "Go To Dashboard Page",
+          "exact": true,
+          "to": "/",
+        },
+        "ref": null,
+        "rendered": "Go To Dashboard Page",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "is-active",
+          "ariaCurrent": "true",
+          "children": "Go To Add Page",
+          "to": "/create",
+        },
+        "ref": null,
+        "rendered": "Go To Add Page",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "is-active",
+          "ariaCurrent": "true",
+          "children": "Go Edit Page",
+          "to": "/edit",
+        },
+        "ref": null,
+        "rendered": "Go Edit Page",
+        "type": [Function],
+      },
+      " ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+    ],
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            Expensify
+</h1>,
+          <NavLink
+            activeClassName="is-active"
+            ariaCurrent="true"
+            exact={true}
+            to="/"
+>
+            Go To Dashboard Page
+</NavLink>,
+          <br />,
+          <NavLink
+            activeClassName="is-active"
+            ariaCurrent="true"
+            to="/create"
+>
+            Go To Add Page
+</NavLink>,
+          <br />,
+          <NavLink
+            activeClassName="is-active"
+            ariaCurrent="true"
+            to="/edit"
+>
+            Go Edit Page
+</NavLink>,
+          " ",
+          <br />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Expensify",
+          },
+          "ref": null,
+          "rendered": "Expensify",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "is-active",
+            "ariaCurrent": "true",
+            "children": "Go To Dashboard Page",
+            "exact": true,
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "Go To Dashboard Page",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "is-active",
+            "ariaCurrent": "true",
+            "children": "Go To Add Page",
+            "to": "/create",
+          },
+          "ref": null,
+          "rendered": "Go To Add Page",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "is-active",
+            "ariaCurrent": "true",
+            "children": "Go Edit Page",
+            "to": "/edit",
+          },
+          "ref": null,
+          "rendered": "Go Edit Page",
+          "type": [Function],
+        },
+        " ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+      ],
+      "type": "header",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
