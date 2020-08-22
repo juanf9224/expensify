@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "Juan Fernandez",
   "license": "MIT",
+  "engines": {
+    "node": "10.16.0",
+    "yarn": "^1.22.4"
+  },
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
@@ -27,7 +31,7 @@
     "extract-text-webpack-plugin": "3.0.0",
     "jest": "20.0.4",
     "moment": "2.18.1",
-    "node-sass": "4.5.3",
+    "node-sass": "4.14.1",
     "normalize.css": "7.0.0",
     "raf": "3.3.2",
     "react": "16.0.0",
