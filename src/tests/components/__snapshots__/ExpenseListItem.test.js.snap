@@ -6,7 +6,7 @@ exports[`should render ExpenseListItem correctly 1`] = `
     Gum
   </td>
   <td>
-    $195.00
+    $1.95
   </td>
   <td>
     December 31st, 1969
