@@ -6,18 +6,9 @@ import './styles/styles.scss';
 import './firebase/firebase'; import 'react-dates/lib/css/_datepicker.css';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import { addExpense } from './actions/expenses';
-import getVisibleExpenses from './selectors/expenses';
+import { startFetchExpenses } from './actions/expenses';
 
 const store = configureStore();
-
-store.dispatch(addExpense({ description: 'Water Bill', amount: 109500, createdAt: 1500 }));
-store.dispatch(addExpense({ description: 'Gas Bill', amount: 2015, createdAt: 2000 }));
-store.dispatch(addExpense({ description: 'Rent', amount: 1250, createdAt: 2450 }));
-
-const state = store.getState();
-const visible = getVisibleExpenses(state.expenses, state.filters);
-console.log(visible);
 
 const jsx = (
   <Provider store={store}>
@@ -25,4 +16,8 @@ const jsx = (
   </Provider>
 )
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+
+store.dispatch(startFetchExpenses()).then(() => {
+  ReactDOM.render(jsx, document.getElementById('app'));
+});
