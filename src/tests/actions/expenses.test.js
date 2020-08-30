@@ -47,7 +47,7 @@ test('should add expense to database and store', async (done) => {
   })
 });
 
-test('should add expense wioth default values to database and store', async (done) => {
+test('should add expense with default values to database and store', async (done) => {
   const store = createMockStore({});
   const expenseData = {
     description: '',
