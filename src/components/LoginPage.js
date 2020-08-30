@@ -2,32 +2,15 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { startLogin } from '../actions/auth';
 
-export const LoginPage = ({ startLogin }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    startLogin();
-  };
-
-  return (
-    <form onSubmit={onSubmit}>
-      <input
-        type="text"
-        placeholder="username"
-        value={username}
-        onChange={e => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={e => setPassword(e.target.value)}
-      />
-      <button type="submit">Login</button>
-    </form>
-  );
-}
+export const LoginPage = ({ startLogin }) => (
+  <div className="box-layout">
+    <div className="box-layout__box">
+      <h1 className="box-layout__title">Expensify App</h1>
+      <p>It's time to get your expenses under control</p>
+      <button onClick={() => startLogin()}>Login</button>
+    </div>    
+  </div>
+);
 
 const mapDispatchToProps = (dispatch) => ({
   startLogin: () => dispatch(startLogin())
