@@ -5,6 +5,8 @@ import expenses from '../fixtures/expenses';
 import expenseReducer from '../../reducers/expenses';
 import database from '../../firebase/firebase';
 
+const uid = 'thisismyuid';
+const defaultAuthState = { auth: { uid } };
 const createMockStore = configureMockStore([thunk]);
 
 test('Should remove an expense', () => {
@@ -24,7 +26,7 @@ test('should add expense action object with provided values', () => {
 });
 
 test('should add expense to database and store', async (done) => {
-  const store = createMockStore({});
+  const store = createMockStore(defaultAuthState);
   const expenseData = {
     description: 'Mouse',
     amount: 3000,
@@ -40,7 +42,7 @@ test('should add expense to database and store', async (done) => {
         ...expenseData
       }
     });
-    return database.ref(`expenses/${actions[0].expense.id}`).once('value');
+    return database.ref(`users/${uid}/expenses/${actions[0].expense.id}`).once('value');
   }).then((snapshot) => {
     expect(snapshot.val()).toEqual(expenseData);
     done();
@@ -48,7 +50,7 @@ test('should add expense to database and store', async (done) => {
 });
 
 test('should add expense with default values to database and store', async (done) => {
-  const store = createMockStore({});
+  const store = createMockStore(defaultAuthState);
   const expenseData = {
     description: '',
     note: '',
@@ -64,7 +66,7 @@ test('should add expense with default values to database and store', async (done
         ...expenseData
       }
     });
-    return database.ref(`expenses/${actions[0].expense.id}`).once('value');
+    return database.ref(`users/${uid}/expenses/${actions[0].expense.id}`).once('value');
   }).then((snapshot) => {
     expect(snapshot.val()).toEqual(expenseData);
     done();
@@ -77,11 +79,11 @@ describe('Tests that need the database to be initialized', () => {
     expenses.forEach(({ id, description, note, amount, createdAt }) => {
       expensesData[id] = { description, note, amount, createdAt };
     });
-    await database.ref('expenses').set(expensesData);
+    await database.ref(`users/${uid}/expenses`).set(expensesData);
   });
 
   test('should fetch the expenses from firebase', async () => {
-    const store = createMockStore({});
+    const store = createMockStore(defaultAuthState);
     await store.dispatch(startFetchExpenses());
     expect(store.getActions()[0]).toEqual({
       type: 'SET_EXPENSES',
